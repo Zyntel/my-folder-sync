@@ -3,25 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NHL TAT Dashboard</title>
+  <title>Laboratory Performance Dashboard</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="dashboard">
-    <h1>NHL TAT Dashboard</h1>
+  <header>
+    <h1>NHL Laboratory Dashboard</h1>
+    <h1>Period: April 2025</h1>
+    <nav>
+      <a href="">Numbers</a>
+      <a href="">TAT</a>
+      <a href="">Tests</a>
+      <a href="">Sections</a>
+      <a href="">Revenue</a>
+    </nav>
+   
+  </header>
+
+  <div class="rightSidebars">
+  
+    <h2>Shift</h2>
 
     <div class="filters">
-      <label for="departmentFilter">Filter by Department:</label>
-      <select id="departmentFilter">
-        <option value="ALL">All Departments</option>
+      <label for="departmentFilter">Filter by Shift:</label>
+      <select id="shiftFilter">
+        <option value="ALL">Both Shifts</option>
       </select>
     </div>
 
-    <div class="charts">
-      <canvas id="tatChart"></canvas>
-      <canvas id="shiftChart"></canvas>
+    <h2>Department</h2>
+
+    <div class="filters">
+        <label for="departmentFilter">Filter by Department:</label>
+        <select id="departmentFilter">
+          <option value="ALL">All Departments</option>
+        </select>
     </div>
+
+    <h2>Delay</h2>
+
+    <div class="filters">
+        <label for="departmentFilter">Filter by Delays:</label>
+        <select id="departmentFilter">
+          <option value="ALL">All Delay Categories</option>
+        </select>
+    </div>
+  </div>
+
+  <div class="leftSidebars">
+
+      <h2>Date</h2>
+  
+      <div class="filters">
+        <label for="departmentFilter">Filter by Date:</label>
+        <select id="dateFilter">
+          <option value="ALL">All Days of the Month</option>
+        </select>
+      </div>
+  </div>
+
+  <div class="charts">
+    <canvas id="tatPercentageChart"></canvas>
+    <canvas id="totalNumberChart"></canvas>
+  </div>
+
+  <div class="charts">
+      <canvas id="performanceChart"></canvas>
+      <canvas id="numbersChart"></canvas>
+      <canvas id="workloadChart"></canvas>
+      <canvas id="tatPieChart"></canvas>
+      <canvas id="categoryChart"></canvas>
   </div>
 
   <script src="script.js"></script>
